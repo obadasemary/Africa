@@ -39,4 +39,14 @@
 
 - Bring the full iPadOS app to **macOS 11**, etc.
 
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_0.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_1.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_2.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_3.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_4.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_5.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_6.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_7.jpg" alt="HTML5 Icon">
+<img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_8.jpg" alt="HTML5 Icon">
+
 <img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_iPhone_1.png" alt="HTML5 Icon" width="276" height="598"> <img src="https://github.com/obadasemary/Africa/blob/main/Screenshots/Africa_iPhone_2.png" alt="HTML5 Icon" width="276" height="598">
