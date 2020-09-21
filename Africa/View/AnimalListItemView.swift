@@ -11,14 +11,14 @@ struct AnimalListItemView: View {
     
     // MARK: - PROPERTIES
     
-    
+    let animal: Animal
     
     // MARK: - BODY
     
     var body: some View {
         HStack {
             
-            Image("lion")
+            Image(animal.image)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 90, height: 90)
@@ -28,12 +28,12 @@ struct AnimalListItemView: View {
             
             VStack(alignment: .leading, spacing: 8, content: {
                 
-                /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                Text(animal.name)
                     .font(.title2)
                     .fontWeight(.heavy)
                     .foregroundColor(.accentColor)
                 
-                Text("asjfasjlaflkjasfhjlsafllasffhlasfasflhklhjkasfljhsfaljfsajlh jlljfsajlafsjklfasjlk")
+                Text(animal.headline)
                     .font(.footnote)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
@@ -46,8 +46,11 @@ struct AnimalListItemView: View {
 // MARK: - PREVIEW
 
 struct AnimalListItemView_Previews: PreviewProvider {
+    
+    static let animal: [Animal] = Bundle.main.decode("animals.json")
+    
     static var previews: some View {
-        AnimalListItemView()
+        AnimalListItemView(animal: animal[1])
             .previewLayout(.sizeThatFits)
             .padding()
     }
