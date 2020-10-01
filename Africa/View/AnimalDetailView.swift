@@ -40,7 +40,11 @@ struct AnimalDetailView: View {
                     )
                 
                 // head line
-                
+                Text(animal.headline)
+                    .font(.headline)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.accentColor)
+                    .padding(.horizontal)
                 
                 // gallery
                 
