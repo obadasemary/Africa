@@ -41,6 +41,7 @@ struct AnimalDetailView: View {
                 
                 // head line
                 
+                
                 // gallery
                 
                 // facts
