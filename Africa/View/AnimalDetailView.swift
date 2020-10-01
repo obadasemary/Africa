@@ -21,12 +21,12 @@ struct AnimalDetailView: View {
             
             VStack(alignment: .center, spacing: 20) {
                 
-                // hero image
+                // HEROIMAGE
                 Image(animal.image)
                     .resizable()
                     .scaledToFit()
                 
-                // title
+                // TITLE
                 Text(animal.name.uppercased())
                     .font(.largeTitle)
                     .fontWeight(.heavy)
@@ -39,22 +39,29 @@ struct AnimalDetailView: View {
                             .offset(y: 24)
                     )
                 
-                // head line
+                // HEADLINE
                 Text(animal.headline)
                     .font(.headline)
                     .multilineTextAlignment(.leading)
                     .foregroundColor(.accentColor)
                     .padding(.horizontal)
                 
-                // gallery
+                // GALLERY
+                Group {
+                    
+                    HeadingView(headingImage: "photo.on.rectangle.angled", headingText: "Wilderness in Pictures")
+                    
+                    InsetGalleryView(animal: animal)
+                }
+                .padding(.horizontal)
                 
-                // facts
+                // FACTS
                 
-                // description
+                // DESCRIPTION
                 
-                // map
+                // MAP
                 
-                // link
+                // LINK
                 
             }
             .navigationBarTitle("Learn about \(animal.name)", displayMode: .inline)
