@@ -13,6 +13,7 @@ struct VideoListView: View {
     
     @State var videos: [Video] = Bundle.main.decode("videos.json")
     
+    
     // MARK: - BODY
     
     var body: some View {
@@ -28,7 +29,7 @@ struct VideoListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        
+                        videos.shuffle()
                     }, label: {
                         Image(systemName: "arrow.2.squarepath")
                     })
