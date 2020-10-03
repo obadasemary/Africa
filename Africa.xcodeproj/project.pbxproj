@@ -42,6 +42,7 @@
 		AFEC59772526A09C002428C2 /* InsetFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC59762526A09C002428C2 /* InsetFactView.swift */; };
 		AFEC597C2526A27D002428C2 /* InsetMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC597B2526A27D002428C2 /* InsetMapView.swift */; };
 		AFEC59812526A636002428C2 /* ExternalWeblinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC59802526A636002428C2 /* ExternalWeblinkView.swift */; };
+		AFEC598625290BB8002428C2 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC598525290BB8002428C2 /* VideoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		AFEC59762526A09C002428C2 /* InsetFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetFactView.swift; sourceTree = "<group>"; };
 		AFEC597B2526A27D002428C2 /* InsetMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetMapView.swift; sourceTree = "<group>"; };
 		AFEC59802526A636002428C2 /* ExternalWeblinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalWeblinkView.swift; sourceTree = "<group>"; };
+		AFEC598525290BB8002428C2 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				AF1D20B22518E48000C6B243 /* CoverImageModel.swift */,
 				AF1D20CC2518F8AF00C6B243 /* AnimalModel.swift */,
+				AFEC598525290BB8002428C2 /* VideoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				AFEC597C2526A27D002428C2 /* InsetMapView.swift in Sources */,
 				AFBBEEE32516D8560053D565 /* AfricaApp.swift in Sources */,
 				AFBBEF362516DCFA0053D565 /* VideoListView.swift in Sources */,
+				AFEC598625290BB8002428C2 /* VideoModel.swift in Sources */,
 				AFBBEF432516DD450053D565 /* GalleryView.swift in Sources */,
 				AFEC597225269DB9002428C2 /* InsetGalleryView.swift in Sources */,
 				AF1D20BA2518F27100C6B243 /* CodableBundleExtension.swift in Sources */,
