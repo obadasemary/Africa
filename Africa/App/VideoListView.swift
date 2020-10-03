@@ -22,6 +22,7 @@ struct VideoListView: View {
                     VideoListItemView(video: video)
                 }
             }
+            .listStyle(InsetGroupedListStyle())
         }
     }
 }
