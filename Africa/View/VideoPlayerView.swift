@@ -21,11 +21,11 @@ struct VideoPlayerView: View {
         
         VStack {
             VideoPlayer(player: playVideo(fileName: videoSelected, fileFormat: "mp4")) {
-                Text(videoTitle)
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.accentColor)
-                    .offset(y: 200)
+//                Text(videoTitle)
+//                    .font(.largeTitle)
+//                    .fontWeight(.heavy)
+//                    .foregroundColor(.accentColor)
+//                    .offset(x: 150, y: 100)
             }
             .overlay(
                 Image("logo")
