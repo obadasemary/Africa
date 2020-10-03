@@ -12,11 +12,33 @@ struct VideoPlayerView: View {
     
     // MARK: - PROPERTIES
     
+    var videoSelected: String
+    var videoTitle: String
+    
     // MARK: - BODY
     
     var body: some View {
         
-        VideoPlayer(player: playVideo(fileName: "cheetah", fileFormat: "mp4"))
+        VStack {
+            VideoPlayer(player: playVideo(fileName: videoSelected, fileFormat: "mp4")) {
+                Text(videoTitle)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.accentColor)
+                    .offset(y: 200)
+            }
+            .overlay(
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 32, height: 32)
+                    .padding(.top, 6)
+                    .padding(.horizontal, 8)
+                , alignment: .topLeading
+            )
+        }
+        .accentColor(.accentColor)
+        .navigationBarTitle(videoTitle, displayMode: .inline)
     }
 }
 
@@ -24,6 +46,8 @@ struct VideoPlayerView: View {
 
 struct VideoPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoPlayerView()
+        NavigationView {
+            VideoPlayerView(videoSelected: "lion", videoTitle: "Lion")
+        }
     }
 }
