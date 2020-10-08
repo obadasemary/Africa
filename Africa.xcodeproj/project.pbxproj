@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF076D03252FAE8F003F80B7 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF076D02252FAE8F003F80B7 /* LocationModel.swift */; };
 		AF176EF92529136600F149E6 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF176EF82529136600F149E6 /* VideoPlayerView.swift */; };
 		AF176F02252914A900F149E6 /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF176F01252914A900F149E6 /* VideoPlayerHelper.swift */; };
 		AF1D20B32518E48000C6B243 /* CoverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1D20B22518E48000C6B243 /* CoverImageModel.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF076D02252FAE8F003F80B7 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		AF176EF82529136600F149E6 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		AF176F01252914A900F149E6 /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
 		AF1D20B22518E48000C6B243 /* CoverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageModel.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				AF1D20B22518E48000C6B243 /* CoverImageModel.swift */,
 				AF1D20CC2518F8AF00C6B243 /* AnimalModel.swift */,
 				AFEC598525290BB8002428C2 /* VideoModel.swift */,
+				AF076D02252FAE8F003F80B7 /* LocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				AFBBEF362516DCFA0053D565 /* VideoListView.swift in Sources */,
 				AFEC598625290BB8002428C2 /* VideoModel.swift in Sources */,
 				AFBBEF432516DD450053D565 /* GalleryView.swift in Sources */,
+				AF076D03252FAE8F003F80B7 /* LocationModel.swift in Sources */,
 				AFEC597225269DB9002428C2 /* InsetGalleryView.swift in Sources */,
 				AFEC598B25290C0D002428C2 /* VideoListItemView.swift in Sources */,
 				AF1D20BA2518F27100C6B243 /* CodableBundleExtension.swift in Sources */,
