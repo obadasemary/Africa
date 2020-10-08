@@ -40,21 +40,6 @@ struct MapView: View {
             // MapMarker(coordinate: item.location, tint: .accentColor)
             
             // MARK: - (C) CUSTOM BASIC ANNOTATION: (it could be interactive)
-//            MapAnnotation(coordinate: item.location, anchorPoint: CGPoint(x: 0, y: 0)) {
-////                Image(item.image)
-//                ZStack {
-//                    Image("logo")
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 32, height: 32, alignment: .center)
-//                        .cornerRadius(6)
-//
-//                    Circle()
-//                        .foregroundColor(.clear)
-//                }
-//
-//
-//            }
             MapAnnotation(coordinate: item.location) {
 
                 ZStack {
