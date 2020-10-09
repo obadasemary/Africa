@@ -31,40 +31,57 @@ struct MapView: View {
         // Map(coordinateRegion: $region)
         
         // MARK: - No2 ANNOTATIONS MAP
-        Map(coordinateRegion: $region, annotationItems: locations) { item in
+        //
+        //        Map(coordinateRegion: $region, annotationItems: locations) { item in
+        //
+        //            // MARK: - (A) PIN: OLD STYLE (always static)
+        //            // MapPin(coordinate: item.location, tint: .accentColor)
+        //
+        //            // MARK: - (B) MARKER: NEW STYLE (always static)
+        //            // MapMarker(coordinate: item.location, tint: .accentColor)
+        //
+        //            // MARK: - (C) CUSTOM BASIC ANNOTATION: (it could be interactive)
+        //            // MapAnnotation(coordinate: item.location) {
+        //            //
+        //            //     ZStack {
+        //            //
+        //            //         Circle()
+        //            //             .fill(Color.accentColor)
+        //            //             .frame(width: 54, height: 54, alignment: .center)
+        //            //
+        //            //         Circle()
+        //            //             .stroke(Color.accentColor, lineWidth: 2)
+        //            //             .frame(width: 52, height: 52, alignment: .center)
+        //            //
+        //            //         Image(item.image)
+        //            //             .resizable()
+        //            //             .scaledToFit()
+        //            //             .frame(width: 48, height: 48, alignment: .center)
+        //            //             .clipShape(Circle())
+        //            //     }
+        //            // }
+        //
+        //            // MARK: - (D) CUSTOM ADVANCED ANNOTATION: (it could be interactive)
+        //            MapAnnotation(coordinate: item.location) {
+        //                MapAnnotationView(location: item)
+        //            }
+        //        }
+        
+        Map(coordinateRegion: $region, annotationItems: locations, annotationContent: { item in
             
-            // MARK: - (A) PIN: OLD STYLE (always static)
-            // MapPin(coordinate: item.location, tint: .accentColor)
-            
-            // MARK: - (B) MARKER: NEW STYLE (always static)
-            // MapMarker(coordinate: item.location, tint: .accentColor)
-            
-            // MARK: - (C) CUSTOM BASIC ANNOTATION: (it could be interactive)
-//            MapAnnotation(coordinate: item.location) {
-//
-//                ZStack {
-//
-//                    Circle()
-//                        .fill(Color.accentColor)
-//                        .frame(width: 54, height: 54, alignment: .center)
-//
-//                    Circle()
-//                        .stroke(Color.accentColor, lineWidth: 2)
-//                        .frame(width: 52, height: 52, alignment: .center)
-//
-//                    Image(item.image)
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 48, height: 48, alignment: .center)
-//                        .clipShape(Circle())
-//                }
-//            }
-            
-            // MARK: - (D) CUSTOM ADVANCED ANNOTATION: (it could be interactive)
             MapAnnotation(coordinate: item.location) {
                 MapAnnotationView(location: item)
             }
-        }
+        })
+        .overlay(
+            HStack(alignment: .center, spacing: 12, content: {
+                
+                Image("compass")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 48, height: 48, alignment: .center)
+            })
+        )
         .edgesIgnoringSafeArea(.all)
     }
 }
