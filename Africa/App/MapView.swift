@@ -31,32 +31,100 @@ struct MapView: View {
         // Map(coordinateRegion: $region)
         
         // MARK: - No2 ANNOTATIONS MAP
-        Map(coordinateRegion: $region, annotationItems: locations) { item in
+        //
+        //        Map(coordinateRegion: $region, annotationItems: locations) { item in
+        //
+        //            // MARK: - (A) PIN: OLD STYLE (always static)
+        //            // MapPin(coordinate: item.location, tint: .accentColor)
+        //
+        //            // MARK: - (B) MARKER: NEW STYLE (always static)
+        //            // MapMarker(coordinate: item.location, tint: .accentColor)
+        //
+        //            // MARK: - (C) CUSTOM BASIC ANNOTATION: (it could be interactive)
+        //            // MapAnnotation(coordinate: item.location) {
+        //            //
+        //            //     ZStack {
+        //            //
+        //            //         Circle()
+        //            //             .fill(Color.accentColor)
+        //            //             .frame(width: 54, height: 54, alignment: .center)
+        //            //
+        //            //         Circle()
+        //            //             .stroke(Color.accentColor, lineWidth: 2)
+        //            //             .frame(width: 52, height: 52, alignment: .center)
+        //            //
+        //            //         Image(item.image)
+        //            //             .resizable()
+        //            //             .scaledToFit()
+        //            //             .frame(width: 48, height: 48, alignment: .center)
+        //            //             .clipShape(Circle())
+        //            //     }
+        //            // }
+        //
+        //            // MARK: - (D) CUSTOM ADVANCED ANNOTATION: (it could be interactive)
+        //            MapAnnotation(coordinate: item.location) {
+        //                MapAnnotationView(location: item)
+        //            }
+        //        }
+        
+        Map(coordinateRegion: $region, annotationItems: locations, annotationContent: { item in
             
-            // MARK: - (A) PIN: OLD STYLE (always static)
-            // MapPin(coordinate: item.location, tint: .accentColor)
-            
-            // MARK: - (B) MARKER: NEW STYLE (always static)
-            // MapMarker(coordinate: item.location, tint: .accentColor)
-            
-            // MARK: - (C) CUSTOM BASIC ANNOTATION: (it could be interactive)
             MapAnnotation(coordinate: item.location) {
-
-                ZStack {
-                    
-                    Circle()
-                        .background(Color.accentColor)
-                        .foregroundColor(.accentColor)
-                        .cornerRadius(20)
-                    
-                    Image(item.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 32, height: 32, alignment: .center)
-                        .cornerRadius(16)
-                }
+                MapAnnotationView(location: item)
             }
-        }
+        })
+        .overlay(
+            HStack(alignment: .center, spacing: 12, content: {
+                
+                Image("compass")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 48, height: 48, alignment: .center)
+                
+                VStack(alignment: .leading, spacing: 3, content: {
+                    
+                    HStack {
+                        
+                        Text("Latitude:")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .foregroundColor(.accentColor)
+                        
+                        Spacer()
+                        
+                        Text("\(region.center.latitude)")
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                    }
+                    
+                    Divider()
+                    
+                    HStack {
+                        
+                        Text("Longitude:")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .foregroundColor(.accentColor)
+                        
+                        Spacer()
+                        
+                        Text("\(region.center.longitude)")
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                    }
+                })
+            })
+            .padding(.vertical, 12)
+            .padding(.horizontal, 16)
+            .background(
+                Color.black
+                    .cornerRadius(8)
+                    .opacity(0.6)
+            )
+            .padding()
+            .padding(.vertical, 25)
+            , alignment: .top
+        )
         .edgesIgnoringSafeArea(.all)
     }
 }
