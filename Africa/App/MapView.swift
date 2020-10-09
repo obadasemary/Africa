@@ -45,9 +45,11 @@ struct MapView: View {
                 ZStack {
                     
                     Circle()
-                        .background(Color.accentColor)
-                        .foregroundColor(.accentColor)
-                        .cornerRadius(20)
+                        .background(
+                            Color.black
+                                .opacity(0.4)
+                                .cornerRadius(8)
+                        )
                     
                     Image(item.image)
                         .resizable()
