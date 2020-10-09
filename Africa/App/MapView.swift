@@ -40,23 +40,29 @@ struct MapView: View {
             // MapMarker(coordinate: item.location, tint: .accentColor)
             
             // MARK: - (C) CUSTOM BASIC ANNOTATION: (it could be interactive)
+//            MapAnnotation(coordinate: item.location) {
+//
+//                ZStack {
+//
+//                    Circle()
+//                        .fill(Color.accentColor)
+//                        .frame(width: 54, height: 54, alignment: .center)
+//
+//                    Circle()
+//                        .stroke(Color.accentColor, lineWidth: 2)
+//                        .frame(width: 52, height: 52, alignment: .center)
+//
+//                    Image(item.image)
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 48, height: 48, alignment: .center)
+//                        .clipShape(Circle())
+//                }
+//            }
+            
+            // MARK: - (D) CUSTOM ADVANCED ANNOTATION: (it could be interactive)
             MapAnnotation(coordinate: item.location) {
-
-                ZStack {
-                    
-                    Circle()
-                        .background(
-                            Color.black
-                                .opacity(0.4)
-                                .cornerRadius(8)
-                        )
-                    
-                    Image(item.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 32, height: 32, alignment: .center)
-                        .cornerRadius(16)
-                }
+                MapAnnotationView(location: item)
             }
         }
         .edgesIgnoringSafeArea(.all)
